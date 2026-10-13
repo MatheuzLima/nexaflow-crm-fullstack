@@ -1,0 +1,1 @@
+export const QUALIFIED_THRESHOLD = 60

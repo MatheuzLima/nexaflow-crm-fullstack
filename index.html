@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content="#0f1220" />
+
+    <title>NexaFlow CRM &amp; Ops | Demonstração</title>
+    <meta
+      name="description"
+      content="Plataforma web sob medida com dashboard em tempo real, qualificação automática de contatos com IA e roteamento de atendimentos. Demonstração interativa."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content="NexaFlow CRM & Ops" />
+    <meta
+      property="og:description"
+      content="Dashboard em tempo real, agente de IA que qualifica contatos e automações de atendimento."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      // Aplica o tema salvo antes do React carregar (evita o "flash" de tema errado)
+      try {
+        var t = localStorage.getItem("nexaflow-theme") || "dark";
+        if (t === "system") {
+          t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.classList.remove("dark", "light");
+        document.documentElement.classList.add(t);
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
